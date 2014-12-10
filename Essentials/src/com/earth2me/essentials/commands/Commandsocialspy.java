@@ -22,6 +22,8 @@ public class Commandsocialspy extends EssentialsToggleCommand
 	@Override
 	protected void run(final Server server, final User user, final String commandLabel, final String[] args) throws Exception
 	{
+		//Meri start
+		/*
 		if (args.length == 1)
 		{
 			Boolean toggle = matchToggleArgument(args[0]);
@@ -42,6 +44,9 @@ public class Commandsocialspy extends EssentialsToggleCommand
 		{
 			togglePlayer(user.getSource(), user, null);
 		}
+		*/
+		user.sendMessage("§5Nadie tiene acceso al SocialSpy!");
+		//Meri end
 	}
 
 	@Override
