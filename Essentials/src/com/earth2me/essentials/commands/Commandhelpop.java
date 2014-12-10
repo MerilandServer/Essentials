@@ -5,8 +5,13 @@ import com.earth2me.essentials.Console;
 import static com.earth2me.essentials.I18n.tl;
 import com.earth2me.essentials.User;
 import com.earth2me.essentials.utils.FormatUtil;
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
 import java.util.logging.Level;
+import org.bukkit.ChatColor;
 import org.bukkit.Server;
+import org.bukkit.entity.Player;
 
 
 public class Commandhelpop extends EssentialsCommand
@@ -30,7 +35,14 @@ public class Commandhelpop extends EssentialsCommand
 	@Override
 	public void run(final Server server, final CommandSource sender, final String commandLabel, final String[] args) throws Exception
 	{
-		sendMessage(server, sender, Console.NAME, args);
+		//Meri start
+		//sendMessage(server, sender, Console.NAME, args);
+		//Player p = Bukkit.getOnlinePlayers().[0];
+		Player[] pl;
+		pl = ess.getOnlinePlayers().toArray(new Player[ess.getOnlinePlayers().size()]);
+		sendMessageConsola(server, pl[0], Console.NAME, args);
+		
+		
 	}
 
 	private String sendMessage(final Server server, final CommandSource sender, final String from, final String[] args) throws Exception
@@ -41,7 +53,40 @@ public class Commandhelpop extends EssentialsCommand
 		}
 		final String message = tl("helpOp", from, FormatUtil.stripFormat(getFinalArg(args, 0)));
 		server.getLogger().log(Level.INFO, message);
-		ess.broadcastMessage("essentials.helpop.receive", message);
+		//Meri start
+		//ess.broadcastMessage("essentials.helpop.receive", message);
+		enviarHelpOP(sender.getPlayer(), message);
+		//Meri end
 		return message;
 	}
+	
+	//Meri start
+	private String sendMessageConsola(final Server server, final Player p, final String from, final String[] args) throws Exception
+	{
+		if (args.length < 1)
+		{
+			throw new NotEnoughArgumentsException();
+		}
+		final String message = tl("helpOp", from, FormatUtil.stripFormat(getFinalArg(args, 0)));
+		server.getLogger().log(Level.INFO, message);
+		enviarHelpOP(p, message);
+		return message;
+	}
+	
+    public void enviarHelpOP(Player p, String mensaje) {
+		try {
+			ByteArrayOutputStream b = new ByteArrayOutputStream();
+            DataOutputStream out = new DataOutputStream(b);
+            out.writeUTF("CoreHelpOp");
+            out.writeUTF(p.getName());
+            out.writeUTF(mensaje);
+            p.sendPluginMessage(ess, "MeriCore", b.toByteArray());
+		} catch(IOException e) {
+			if (ess.getSettings().isDebug()) {
+				ess.getLogger().severe("Error enviando un mensaje: ");
+				ess.getLogger().severe(e.getMessage());
+			}
+		}
+    }
+	//Meri end
 }

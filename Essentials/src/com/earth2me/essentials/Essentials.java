@@ -248,7 +248,10 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials
 
 			Economy.setEss(this);
 			execTimer.mark("RegHandler");
-
+			//Meri start
+			this.getServer().getMessenger().registerOutgoingPluginChannel(this, "MeriCore");
+			//Meri end
+			
 			final MetricsStarter metricsStarter = new MetricsStarter(this);
 			if (metricsStarter.getStart() != null && metricsStarter.getStart() == true)
 			{
