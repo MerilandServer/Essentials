@@ -55,7 +55,8 @@ public class Commandhelpop extends EssentialsCommand
 		server.getLogger().log(Level.INFO, message);
 		//Meri start
 		//ess.broadcastMessage("essentials.helpop.receive", message);
-		enviarHelpOP(sender.getPlayer(), message);
+		Player p = sender.getPlayer();
+		enviarHelpOP(p, p.getCustomName(), message);
 		//Meri end
 		return message;
 	}
@@ -69,16 +70,16 @@ public class Commandhelpop extends EssentialsCommand
 		}
 		final String message = tl("helpOp", from, FormatUtil.stripFormat(getFinalArg(args, 0)));
 		server.getLogger().log(Level.INFO, message);
-		enviarHelpOP(p, message);
+		enviarHelpOP(p, "Consola", message);
 		return message;
 	}
 	
-    public void enviarHelpOP(Player p, String mensaje) {
+    public void enviarHelpOP(Player p, String nombre, String mensaje) {
 		try {
 			ByteArrayOutputStream b = new ByteArrayOutputStream();
             DataOutputStream out = new DataOutputStream(b);
             out.writeUTF("CoreHelpOp");
-            out.writeUTF(p.getName());
+            out.writeUTF(nombre);
             out.writeUTF(mensaje);
             p.sendPluginMessage(ess, "MeriCore", b.toByteArray());
 		} catch(IOException e) {
