@@ -9,7 +9,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.logging.Level;
-import org.bukkit.ChatColor;
 import org.bukkit.Server;
 import org.bukkit.entity.Player;
 
@@ -25,7 +24,7 @@ public class Commandhelpop extends EssentialsCommand
 	public void run(final Server server, final User user, final String commandLabel, final String[] args) throws Exception
 	{
 		user.setDisplayNick();
-		final String message = sendMessage(server, user.getSource(), user.getDisplayName(), args);
+		final String message = sendMessage(server, user.getSource(), user.getName(), args);
 		if (!user.isAuthorized("essentials.helpop.receive"))
 		{
 			user.sendMessage(message);
@@ -56,7 +55,7 @@ public class Commandhelpop extends EssentialsCommand
 		//Meri start
 		//ess.broadcastMessage("essentials.helpop.receive", message);
 		Player p = sender.getPlayer();
-		enviarHelpOP(p, p.getCustomName(), message);
+		enviarHelpOP(p, p.getName(), message);
 		//Meri end
 		return message;
 	}
