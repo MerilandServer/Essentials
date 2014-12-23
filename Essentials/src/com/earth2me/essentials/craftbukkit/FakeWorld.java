@@ -741,4 +741,12 @@ public class FakeWorld implements World
 	{
 		throw new UnsupportedOperationException("Not supported yet.");
 	}
+	
+	//Meri Start
+	@Override
+	public WorldBorder getWorldBorder()
+	{
+		throw new UnsupportedOperationException("Not supported yet."); 
+	}
+	//Meri end
 }
