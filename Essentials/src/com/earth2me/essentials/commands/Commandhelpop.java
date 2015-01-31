@@ -40,8 +40,6 @@ public class Commandhelpop extends EssentialsCommand
 		Player[] pl;
 		pl = ess.getOnlinePlayers().toArray(new Player[ess.getOnlinePlayers().size()]);
 		sendMessageConsola(server, pl[0], Console.NAME, args);
-		
-		
 	}
 
 	private String sendMessage(final Server server, final CommandSource sender, final String from, final String[] args) throws Exception

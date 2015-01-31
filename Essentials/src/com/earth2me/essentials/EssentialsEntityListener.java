@@ -223,4 +223,17 @@ public class EssentialsEntityListener implements Listener
 			}
 		}
 	}
+	/*
+	//Meri Start
+	@EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
+    public void onEntityTarget(EntityTargetEvent event) {
+        if(event.getTarget() instanceof Player){
+			final User user = ess.getUser((Player)event.getTarget());
+            if (user.isGodModeEnabled()) {
+                event.setCancelled(true);
+            } 
+        }
+    }
+	//Meri end*/
+	//Sí, y MeriTest. Trabajando para que los mobs no se te acerquen si tienes el god activado
 }
