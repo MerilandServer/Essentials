@@ -748,5 +748,11 @@ public class FakeWorld implements World
 	{
 		throw new UnsupportedOperationException("Not supported yet."); 
 	}
+	
+	@Override
+	public Spigot spigot()
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
 	//Meri end
 }

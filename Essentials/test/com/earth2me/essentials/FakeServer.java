@@ -74,7 +74,6 @@ public class FakeServer implements Server
 		return "1.0";
 	}
 
-	@Override
 	public Player[] _INVALID_getOnlinePlayers()
 	{
 		return players.toArray(new Player[0]);
@@ -1134,6 +1133,12 @@ public class FakeServer implements Server
 	public Inventory createInventory(InventoryHolder arg0, InventoryType arg1, String arg2)
 	{
 		throw new UnsupportedOperationException("Not supported yet.");
+	}
+
+	@Override
+	public Spigot spigot()
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
 
 

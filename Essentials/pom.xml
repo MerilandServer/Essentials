@@ -26,9 +26,9 @@
 	</licenses>
 
 	<scm>
-		<connection>scm:git:https://github.com/essentials/Essentials.git</connection>
-		<developerConnection>scm:git:https://github.com/essentials/Essentials.git</developerConnection>
-		<url>https://github.com/essentials/Essentials</url>
+		<connection>scm:git:https://Cadiducho@bitbucket.org/Meriland/essentials.git</connection>
+		<developerConnection>scm:git:https://Cadiducho@bitbucket.org/Meriland/essentials.git</developerConnection>
+		<url>https://Cadiducho@bitbucket.org/Meriland/essentials.gits</url>
 	</scm>
 
 	<issueManagement>
@@ -54,8 +54,8 @@
     </build>
     <dependencies>
 		<dependency>
-			<groupId>org.bukkit</groupId>
-			<artifactId>bukkit</artifactId>
+			<groupId>org.spigotmc</groupId>
+			<artifactId>spigot</artifactId>
 			<version>1.8-R0.1-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>
@@ -130,7 +130,7 @@
 		<dependency>
 			<groupId>net.milkbowl.vault</groupId>
 			<artifactId>Vault</artifactId>
-			<version>1.2.32</version>
+			<version>1.5.2</version>
 		</dependency>
 		<dependency>
 			<groupId>zPermissions</groupId>

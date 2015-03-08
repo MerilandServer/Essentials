@@ -1334,6 +1334,7 @@ public class OfflinePlayer implements Player
 		throw new UnsupportedOperationException("Not supported yet.");
 	}
 
+	/* Spigot...
 	@Override
 	public int _INVALID_getLastDamage()
 	{
@@ -1381,7 +1382,8 @@ public class OfflinePlayer implements Player
 	{
 		throw new UnsupportedOperationException("Not supported yet.");
 	}
-
+	*/
+	
 	@Override
 	public void playSound(Location arg0, String arg1, float arg2, float arg3)
 	{
@@ -1545,5 +1547,29 @@ public class OfflinePlayer implements Player
 	public Map<String, Object> serialize()
 	{
 		return base.serialize();
+	}
+
+	@Override
+	public Spigot spigot()
+	{
+		throw new UnsupportedOperationException(tl("notSupportedYet"));
+	}
+
+	@Override
+	public List<Block> getLineOfSight(Set<Material> set, int i)
+	{
+		throw new UnsupportedOperationException(tl("notSupportedYet"));
+	}
+
+	@Override
+	public Block getTargetBlock(Set<Material> set, int i)
+	{
+		throw new UnsupportedOperationException(tl("notSupportedYet"));
+	}
+
+	@Override
+	public List<Block> getLastTwoTargetBlocks(Set<Material> set, int i)
+	{
+		throw new UnsupportedOperationException(tl("notSupportedYet"));
 	}
 }
