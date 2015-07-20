@@ -123,17 +123,6 @@ public class PermissionsHandler implements IPermissionsHandler
 			return;
 		}
 
-		final Plugin GMplugin = pluginManager.getPlugin("GroupManager");
-		if (GMplugin != null && GMplugin.isEnabled())
-		{
-			if (!(handler instanceof GroupManagerHandler))
-			{
-				LOGGER.log(Level.INFO, "Essentials: Using GroupManager based permissions.");
-				handler = new GroupManagerHandler(GMplugin);
-			}
-			return;
-		}
-
 		final Plugin permBukkitPlugin = pluginManager.getPlugin("PermissionsBukkit");
 		if (permBukkitPlugin != null && permBukkitPlugin.isEnabled())
 		{
@@ -163,17 +152,6 @@ public class PermissionsHandler implements IPermissionsHandler
 			{
 				LOGGER.log(Level.INFO, "Essentials: Using Privileges based permissions.");
 				handler = new PrivilegesHandler(privPlugin);
-			}
-			return;
-		}
-
-		final Plugin bPermPlugin = pluginManager.getPlugin("bPermissions");
-		if (bPermPlugin != null && bPermPlugin.isEnabled())
-		{
-			if (!(handler instanceof BPermissions2Handler))
-			{
-				LOGGER.log(Level.INFO, "Essentials: Using bPermissions2 based permissions.");
-				handler = new BPermissions2Handler();
 			}
 			return;
 		}

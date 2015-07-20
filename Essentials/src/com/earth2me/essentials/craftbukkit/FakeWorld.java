@@ -754,5 +754,11 @@ public class FakeWorld implements World
 	{
 		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
-	//Meri end
+
+	@Override
+	public Collection<Entity> getNearbyEntities(Location lctn, double d, double d1, double d2)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+//Meri end
 }
