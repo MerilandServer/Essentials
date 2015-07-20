@@ -23,9 +23,6 @@ import com.earth2me.essentials.commands.IEssentialsCommand;
 import com.earth2me.essentials.commands.NoChargeException;
 import com.earth2me.essentials.commands.NotEnoughArgumentsException;
 import com.earth2me.essentials.commands.QuietAbortException;
-import com.earth2me.essentials.metrics.Metrics;
-import com.earth2me.essentials.metrics.MetricsListener;
-import com.earth2me.essentials.metrics.MetricsStarter;
 import com.earth2me.essentials.perm.PermissionsHandler;
 import com.earth2me.essentials.register.payment.Methods;
 import com.earth2me.essentials.signs.SignBlockListener;
@@ -104,7 +101,6 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials
 	private transient UserMap userMap;
 	private transient ExecuteTimer execTimer;
 	private transient I18n i18n;
-	private transient Metrics metrics;
 	private transient EssentialsTimer timer;
 	private final transient List<String> vanishedPlayers = new ArrayList<String>();
 	private transient Method oldGetOnlinePlayers;
@@ -251,17 +247,6 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials
 			//Meri start
 			this.getServer().getMessenger().registerOutgoingPluginChannel(this, "MeriCore");
 			//Meri end
-			
-			final MetricsStarter metricsStarter = new MetricsStarter(this);
-			if (metricsStarter.getStart() != null && metricsStarter.getStart() == true)
-			{
-				runTaskLaterAsynchronously(metricsStarter, 1);
-			}
-			else if (metricsStarter.getStart() != null && metricsStarter.getStart() == false)
-			{
-				final MetricsListener metricsListener = new MetricsListener(this, metricsStarter);
-				pm.registerEvents(metricsListener, this);
-			}
 
 			final String timeroutput = execTimer.end();
 			if (getSettings().isDebug())
@@ -627,18 +612,6 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials
 	public Backup getBackup()
 	{
 		return backup;
-	}
-
-	@Override
-	public Metrics getMetrics()
-	{
-		return metrics;
-	}
-
-	@Override
-	public void setMetrics(Metrics metrics)
-	{
-		this.metrics = metrics;
 	}
 
 	@Deprecated

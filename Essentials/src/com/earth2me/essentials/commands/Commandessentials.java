@@ -5,7 +5,6 @@ import com.earth2me.essentials.EssentialsUpgrade;
 import static com.earth2me.essentials.I18n.tl;
 import com.earth2me.essentials.User;
 import com.earth2me.essentials.UserMap;
-import com.earth2me.essentials.metrics.Metrics;
 import com.earth2me.essentials.utils.DateUtil;
 import com.earth2me.essentials.utils.NumberUtil;
 import com.google.common.base.Charsets;
@@ -238,24 +237,7 @@ public class Commandessentials extends EssentialsCommand
 
 	private void run_optout(final Server server, final CommandSource sender, final String command, final String args[])
 	{
-		final Metrics metrics = ess.getMetrics();
-		try
-		{
-			sender.sendMessage("Essentials collects simple metrics to highlight which features to concentrate work on in the future.");
-			if (metrics.isOptOut())
-			{
-				metrics.enable();
-			}
-			else
-			{
-				metrics.disable();
-			}
-			sender.sendMessage("Anonymous Metrics are now " + (metrics.isOptOut() ? "disabled" : "enabled") + " for all plugins.");
-		}
-		catch (IOException ex)
-		{
-			sender.sendMessage("Unable to modify 'plugins/PluginMetrics/config.yml': " + ex.getMessage());
-		}
+		sender.sendMessage("Unable to modify 'plugins/PluginMetrics/config.yml'");
 	}
 
 	private void run_cleanup(final Server server, final CommandSource sender, final String command, final String args[]) throws Exception

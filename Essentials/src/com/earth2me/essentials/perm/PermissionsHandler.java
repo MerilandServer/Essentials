@@ -123,50 +123,6 @@ public class PermissionsHandler implements IPermissionsHandler
 			return;
 		}
 
-		final Plugin permBukkitPlugin = pluginManager.getPlugin("PermissionsBukkit");
-		if (permBukkitPlugin != null && permBukkitPlugin.isEnabled())
-		{
-			if (!(handler instanceof PermissionsBukkitHandler))
-			{
-				LOGGER.log(Level.INFO, "Essentials: Using PermissionsBukkit based permissions.");
-				handler = new PermissionsBukkitHandler(permBukkitPlugin);
-			}
-			return;
-		}
-
-		final Plugin simplyPermsPlugin = pluginManager.getPlugin("SimplyPerms");
-		if (simplyPermsPlugin != null && simplyPermsPlugin.isEnabled())
-		{
-			if (!(handler instanceof SimplyPermsHandler))
-			{
-				LOGGER.log(Level.INFO, "Essentials: Using SimplyPerms based permissions.");
-				handler = new SimplyPermsHandler(simplyPermsPlugin);
-			}
-			return;
-		}
-
-		final Plugin privPlugin = pluginManager.getPlugin("Privileges");
-		if (privPlugin != null && privPlugin.isEnabled())
-		{
-			if (!(handler instanceof PrivilegesHandler))
-			{
-				LOGGER.log(Level.INFO, "Essentials: Using Privileges based permissions.");
-				handler = new PrivilegesHandler(privPlugin);
-			}
-			return;
-		}
-
-		final Plugin zPermsPlugin = pluginManager.getPlugin("zPermissions");
-		if (zPermsPlugin != null && zPermsPlugin.isEnabled())
-		{
-			if (!(handler instanceof ZPermissionsHandler))
-			{
-				LOGGER.log(Level.INFO, "Essentials: Using zPermissions based permissions.");
-				handler = new ZPermissionsHandler(ess);
-			}
-			return;
-		}
-
 		if (useSuperperms)
 		{
 			if (!(handler instanceof SuperpermsHandler))
