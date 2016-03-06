@@ -110,19 +110,7 @@ public class PermissionsHandler implements IPermissionsHandler
 
 	public void checkPermissions()
 	{
-		final PluginManager pluginManager = ess.getServer().getPluginManager();
-
-		final Plugin permExPlugin = pluginManager.getPlugin("PermissionsEx");
-		if (permExPlugin != null && permExPlugin.isEnabled())
-		{
-			if (!(handler instanceof PermissionsExHandler))
-			{
-				LOGGER.log(Level.INFO, "Essentials: Using PermissionsEx based permissions.");
-				handler = new PermissionsExHandler();
-			}
-			return;
-		}
-
+		//Meri: Eliminar soporte directo con PEX
 		if (useSuperperms)
 		{
 			if (!(handler instanceof SuperpermsHandler))

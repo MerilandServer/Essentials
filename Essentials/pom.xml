@@ -70,13 +70,6 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>ru.tehkode</groupId>
-			<artifactId>PermissionsEx</artifactId>
-			<version>1.23.3</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/../lib/PermissionsEx.jar</systemPath>
-		</dependency>
-		<dependency>
 			<groupId>net.milkbowl.vault</groupId>
 			<artifactId>Vault</artifactId>
 			<version>1.5.3</version>
