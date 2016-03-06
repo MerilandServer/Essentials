@@ -166,7 +166,7 @@ public class Commandessentials extends EssentialsCommand
 				}
 				for (Player onlinePlayer : ess.getOnlinePlayers())
 				{
-					onlinePlayer.playSound(onlinePlayer.getLocation(), Sound.NOTE_PIANO, 1, noteMap.get(note));
+					onlinePlayer.playSound(onlinePlayer.getLocation(), Sound.BLOCK_NOTE_PLING, 1, noteMap.get(note));
 				}
 			}
 		}, 20, 2);
@@ -216,7 +216,7 @@ public class Commandessentials extends EssentialsCommand
 			for (Player player : ess.getOnlinePlayers())
 			{
 				player.sendMessage(playerMoo);
-				player.playSound(player.getLocation(), Sound.COW_IDLE, 1, 1.0f);
+				player.playSound(player.getLocation(), Sound.ENTITY_COW_AMBIENT, 1, 1.0f);
 			}
 		}
 		else
@@ -225,7 +225,7 @@ public class Commandessentials extends EssentialsCommand
 			{
 				sender.getSender().sendMessage(playerMoo);
 				final Player player = sender.getPlayer();
-				player.playSound(player.getLocation(), Sound.COW_IDLE, 1, 1.0f);
+				player.playSound(player.getLocation(), Sound.ENTITY_COW_AMBIENT, 1, 1.0f);
 
 			}
 			else

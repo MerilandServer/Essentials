@@ -191,12 +191,6 @@ public class FakeWorld implements World
 	}
 
 	@Override
-	public LivingEntity spawnCreature(Location lctn, CreatureType ct)
-	{
-		throw new UnsupportedOperationException("Not supported yet.");
-	}
-
-	@Override
 	public LightningStrike strikeLightning(Location lctn)
 	{
 		throw new UnsupportedOperationException("Not supported yet.");
@@ -587,12 +581,6 @@ public class FakeWorld implements World
 	}
 
 	@Override
-	public LivingEntity spawnCreature(Location arg0, EntityType arg1)
-	{
-		throw new UnsupportedOperationException("Not supported yet.");
-	}
-
-	@Override
 	public <T> void playEffect(Location lctn, Effect effect, T t)
 	{
 		throw new UnsupportedOperationException("Not supported yet.");
@@ -760,5 +748,83 @@ public class FakeWorld implements World
 	{
 		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
-//Meri end
+
+	@Override
+	public void playSound(Location lctn, String string, float f, float f1)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public void spawnParticle(Particle prtcl, Location lctn, int i)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public void spawnParticle(Particle prtcl, double d, double d1, double d2, int i)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle prtcl, Location lctn, int i, T t)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle prtcl, double d, double d1, double d2, int i, T t)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public void spawnParticle(Particle prtcl, Location lctn, int i, double d, double d1, double d2)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public void spawnParticle(Particle prtcl, double d, double d1, double d2, int i, double d3, double d4, double d5)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle prtcl, Location lctn, int i, double d, double d1, double d2, T t)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle prtcl, double d, double d1, double d2, int i, double d3, double d4, double d5, T t)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public void spawnParticle(Particle prtcl, Location lctn, int i, double d, double d1, double d2, double d3)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public void spawnParticle(Particle prtcl, double d, double d1, double d2, int i, double d3, double d4, double d5, double d6)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle prtcl, Location lctn, int i, double d, double d1, double d2, double d3, T t)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle prtcl, double d, double d1, double d2, int i, double d3, double d4, double d5, double d6, T t)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+	//Meri end
 }
