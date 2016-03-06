@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>net.ess3</groupId>
 		<artifactId>EssentialsParent</artifactId>
-		<version>2.x-SNAPSHOT</version>
+		<version>2.x-Meriland</version>
 	</parent>
 
 	<artifactId>EssentialsSpawn</artifactId>

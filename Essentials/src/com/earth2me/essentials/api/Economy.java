@@ -1,8 +1,6 @@
 package com.earth2me.essentials.api;
 
-import com.earth2me.essentials.EssentialsConf;
 import com.earth2me.essentials.EssentialsUserConf;
-import static com.earth2me.essentials.I18n.tl;
 import com.earth2me.essentials.Trade;
 import com.earth2me.essentials.User;
 import static com.earth2me.essentials.api.Economy.add;

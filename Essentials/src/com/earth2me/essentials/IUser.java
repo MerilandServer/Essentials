@@ -60,6 +60,12 @@ public interface IUser
 
 	void setHidden(boolean vanish);
 
+	//Meri start
+	boolean destroyMinecartOnQuit();
+
+	void setDestroyMinecartOnQuit(boolean destroy);
+	//Meri end
+	
 	boolean isGodModeEnabled();
 
 	String getGroup();
