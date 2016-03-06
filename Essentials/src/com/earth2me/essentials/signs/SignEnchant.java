@@ -105,7 +105,7 @@ public class SignEnchant extends EssentialsSign
 			level = enchantment.getMaxLevel();
 		}
 
-		final ItemStack playerHand = player.getBase().getItemInHand();
+		final ItemStack playerHand = player.getBase().getInventory().getItemInMainHand();
 		if (playerHand == null
 			|| playerHand.getAmount() != 1
 			|| (playerHand.containsEnchantment(enchantment)

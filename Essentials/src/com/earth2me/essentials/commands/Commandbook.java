@@ -19,7 +19,7 @@ public class Commandbook extends EssentialsCommand
 	@Override
 	public void run(final Server server, final User user, final String commandLabel, final String[] args) throws Exception
 	{
-		final ItemStack item = user.getBase().getItemInHand();
+		final ItemStack item = user.getBase().getInventory().getItemInMainHand();
 		final String player = user.getName();
 		if (item.getType() == Material.WRITTEN_BOOK)
 		{

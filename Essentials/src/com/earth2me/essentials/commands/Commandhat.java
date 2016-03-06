@@ -37,9 +37,9 @@ public class Commandhat extends EssentialsCommand
 		}
 		else
 		{
-			if (user.getBase().getItemInHand().getType() != Material.AIR)
+			if (user.getBase().getInventory().getItemInMainHand().getType() != Material.AIR)
 			{
-				final ItemStack hand = user.getBase().getItemInHand();
+				final ItemStack hand = user.getBase().getInventory().getItemInMainHand();
 				if (hand.getType().getMaxDurability() == 0)
 				{
 					final PlayerInventory inv = user.getBase().getInventory();

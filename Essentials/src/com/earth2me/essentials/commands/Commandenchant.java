@@ -26,7 +26,7 @@ public class Commandenchant extends EssentialsCommand
 	@Override
 	protected void run(final Server server, final User user, final String commandLabel, final String[] args) throws Exception
 	{
-		final ItemStack stack = user.getBase().getItemInHand();
+		final ItemStack stack = user.getBase().getInventory().getItemInMainHand();
 		if (stack == null || stack.getType() == Material.AIR)
 		{
 			throw new Exception(tl("nothingInHand"));

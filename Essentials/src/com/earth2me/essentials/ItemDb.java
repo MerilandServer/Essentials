@@ -171,11 +171,11 @@ public class ItemDb implements IConf, net.ess3.api.IItemDb
 
 		if (args.length < 1)
 		{
-			is.add(user.getBase().getItemInHand());
+			is.add(user.getBase().getInventory().getItemInMainHand());
 		}
 		else if (args[0].equalsIgnoreCase("hand"))
 		{
-			is.add(user.getBase().getItemInHand());
+			is.add(user.getBase().getInventory().getItemInMainHand());
 		}
 		else if (args[0].equalsIgnoreCase("inventory") || args[0].equalsIgnoreCase("invent") || args[0].equalsIgnoreCase("all"))
 		{
